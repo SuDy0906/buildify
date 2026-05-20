@@ -98,17 +98,21 @@ If there is no way to clear **Deploy command** or **Build command**, **delete th
 
 This repo includes `.github/workflows/cloudflare-pages.yml` which runs `npm run build` and `pages deploy out`.
 
-### One-time setup
+### One-time setup (GitHub Actions — fixes `Not logged in`)
 
-1. Cloudflare → **My Profile** → **API Tokens** → **Create Token** → template **Edit Cloudflare Workers** (or custom with **Account** + **Cloudflare Pages: Edit**)
-2. Copy **Account ID** from Workers & Pages overview (right column)
-3. GitHub → **BUILDIFY-WEBSITE** → **Settings** → **Secrets and variables** → **Actions** → add:
-   - `CLOUDFLARE_API_TOKEN`
-   - `CLOUDFLARE_ACCOUNT_ID`
-4. Cloudflare → create empty Pages project named **`buildify-website`** (or the workflow will try to deploy to that name)
-5. Push to `main` — Actions tab runs the deploy
+1. Cloudflare → [API Tokens](https://dash.cloudflare.com/profile/api-tokens) → **Create Custom Token**
+   - Account → **Cloudflare Pages** → **Edit**
+   - Account → **Account Settings** → Read
+   - User → **User Details** → Read
+   - Account resources: **your personal account** (where `buildify-website` lives)
+2. Copy **Account ID**: Cloudflare → **Workers & Pages** → right sidebar (personal account: `54ef1fd6…`)
+3. GitHub → **https://github.com/SuDy0906/buildify** → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**:
+   - Name: `CLOUDFLARE_API_TOKEN` → paste API token (not the `cfut_` Workers Builds token)
+   - Name: `CLOUDFLARE_ACCOUNT_ID` → paste Account ID
+4. Cloudflare → create Pages project **`buildify-website`** on the **same** account (if it does not exist)
+5. Push to `main` or **Actions** → **Run workflow**
 
-**Disable** automatic builds on the Cloudflare Git integration if both run (Settings → Builds → disconnect or pause Git builds) so only the Action deploys.
+**Disable** Cloudflare Git auto-build on the org Worker if it keeps failing (invalid org build token); let GitHub Actions deploy instead.
 
 ---
 
