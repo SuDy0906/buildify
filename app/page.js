@@ -454,10 +454,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/50 to-[#050505] pointer-events-none z-0"></div>
 
           {/* Extremely Large Background Text */}
-          <div className="absolute inset-x-0 bottom-0 flex justify-center items-end pointer-events-none select-none z-0">
+          <div className="footer-watermark-wrap absolute inset-x-0 bottom-0 flex justify-center items-end pointer-events-none select-none z-0">
             <span
               id="footer-watermark"
-              className="text-[clamp(100px,25vw,360px)] font-display-lg font-bold leading-none tracking-[-0.05em] block text-transparent bg-clip-text bg-gradient-to-t from-primary/50 via-primary/10 to-transparent transition-opacity duration-300"
+              className="footer-watermark font-display-lg font-bold leading-none text-transparent bg-clip-text bg-gradient-to-t from-primary/50 via-primary/10 to-transparent transition-opacity duration-300"
               style={{ opacity: 0 }}
             >
               BUILDIFY

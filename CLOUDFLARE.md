@@ -37,7 +37,7 @@ Use these three fields together:
 
 That runs `wrangler pages deploy out` — static only, no OpenNext.
 
-**Project name:** Cloudflare project must be named `buildify-website` (matches `wrangler.toml`), or change the name in `package.json` → `deploy:cloudflare` script to match your project.
+**Project name:** Cloudflare project must be named `buildify` (matches `wrangler.toml`), or change the name in `package.json` → `deploy:cloudflare` script to match your project.
 
 ---
 
@@ -68,7 +68,7 @@ Build works; **Wrangler deploy** fails because `CLOUDFLARE_API_TOKEN` lacks **Pa
 | `CLOUDFLARE_API_TOKEN` | **Secret** | paste new token |
 | `CLOUDFLARE_ACCOUNT_ID` | Plain or Secret | Account ID from Workers & Pages overview (org or personal) |
 
-Use the **Account ID** for the same account that owns the `buildify-website` Pages project — not necessarily the personal ID from build logs unless the project is under personal account.
+Use the **Account ID** for the same account that owns the `buildify` Pages project — not necessarily the personal ID from build logs unless the project is under personal account.
 
 ### 3. Redeploy
 
@@ -79,7 +79,7 @@ Retry deployment. Deploy step should pass after token + account ID match.
 If needed, change deploy command to:
 
 ```bash
-npx wrangler pages deploy out --project-name=buildify-website
+npx wrangler pages deploy out --project-name=buildify
 ```
 
 and ensure `CLOUDFLARE_ACCOUNT_ID` is set in env (Wrangler reads it automatically).
@@ -104,12 +104,12 @@ This repo includes `.github/workflows/cloudflare-pages.yml` which runs `npm run 
    - Account → **Cloudflare Pages** → **Edit**
    - Account → **Account Settings** → Read
    - User → **User Details** → Read
-   - Account resources: **your personal account** (where `buildify-website` lives)
+   - Account resources: **your personal account** (where `buildify` lives)
 2. Copy **Account ID**: Cloudflare → **Workers & Pages** → right sidebar (personal account: `54ef1fd6…`)
 3. GitHub → **https://github.com/SuDy0906/buildify** → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**:
    - Name: `CLOUDFLARE_API_TOKEN` → paste API token (not the `cfut_` Workers Builds token)
    - Name: `CLOUDFLARE_ACCOUNT_ID` → paste Account ID
-4. Cloudflare → create Pages project **`buildify-website`** on the **same** account (if it does not exist)
+4. Cloudflare → create Pages project **`buildify`** on the **same** account (if it does not exist)
 5. Push to `main` or **Actions** → **Run workflow**
 
 **Disable** Cloudflare Git auto-build on the org Worker if it keeps failing (invalid org build token); let GitHub Actions deploy instead.

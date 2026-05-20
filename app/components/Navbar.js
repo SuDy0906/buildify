@@ -9,6 +9,9 @@ const NAV_ITEMS = [
   { id: "cta", label: "CONTACT US", menuLabel: "Contact Us" },
 ];
 
+/** Must match `.mobile-nav-label-item` height in globals.css */
+const MOBILE_LABEL_SLOT_EM = 1.25;
+
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
   const [activeId, setActiveId] = useState("hero");
@@ -139,11 +142,16 @@ export default function Navbar() {
                   <span
                     className="mobile-nav-label-track"
                     style={{
-                      transform: `translateY(-${safeActiveIndex * 100}%)`,
+                      transform: `translate3d(0, calc(-${safeActiveIndex} * ${MOBILE_LABEL_SLOT_EM}em), 0)`,
                     }}
                   >
                     {NAV_ITEMS.map((item) => (
-                      <span key={item.id} className="mobile-nav-label-item">
+                      <span
+                        key={item.id}
+                        className={`mobile-nav-label-item${
+                          activeId === item.id ? " mobile-nav-label-item--active" : ""
+                        }`}
+                      >
                         {item.label}
                       </span>
                     ))}
@@ -184,8 +192,11 @@ export default function Navbar() {
               type="button"
               onClick={() => scrollTo("cta")}
               className="mobile-start-pill cursor-pointer"
+              aria-label="Start project"
             >
-              Start Project
+              <span className="material-symbols-outlined mobile-start-pill-icon" aria-hidden="true">
+                rocket_launch
+              </span>
             </button>
           </div>
         </div>
