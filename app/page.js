@@ -167,9 +167,9 @@ export default function Home() {
 
       <Navbar />
 
-      <main className="relative blueprint-grid">
+      <main className="page-root relative blueprint-grid">
         {/* Background Spheres */}
-        <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="parallax-layer fixed inset-0 pointer-events-none z-0">
           <div className="parallax-sphere absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-primary rounded-full"></div>
           <div className="parallax-sphere absolute bottom-[20%] right-[10%] w-[300px] h-[300px] bg-secondary rounded-full"></div>
         </div>

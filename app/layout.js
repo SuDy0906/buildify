@@ -13,7 +13,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth overflow-x-clip max-w-full">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans bg-[#050505] text-[#e6e0e9] antialiased blueprint-grid">
+      <body className="font-sans bg-[#050505] text-[#e6e0e9] antialiased blueprint-grid overflow-x-clip max-w-full">
         {children}
         <CustomCursor />
       </body>
