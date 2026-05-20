@@ -22,7 +22,7 @@ That is **wrong** for this repo. The dashboard is using a **Next.js Worker / Ope
 | **Deploy command** | `npm run deploy:cloudflare` | `npx opennextjs-cloudflare build`, bare `npx wrangler deploy` (Worker) |
 | **Framework preset** | **None** or **Static** | Next.js (Workers), OpenNext |
 
-3. **Environment variables:** `NODE_VERSION` = `20`
+3. **Environment variables:** `NODE_VERSION` = `22` (Wrangler v4 requires Node 22+)
 4. **Save** → **Deployments** → **Retry deployment**
 
 ### If **Deploy command** is required (your screen)
