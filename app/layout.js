@@ -3,7 +3,7 @@ import CustomCursor from "./components/CustomCursor";
 
 export const metadata = {
   title: "Buildify Tech Services | Architecting the Digital Future",
-  description: "Elite MVP Creation, Web Development, and ML Workflows engineered for visionary founders and high-growth enterprises.",
+  description: "Elite MVP Creation, Web Development, App Development, Game Development, and ML Workflows engineered for visionary founders and high-growth enterprises.",
 };
 
 export const viewport = {

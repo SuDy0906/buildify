@@ -69,7 +69,7 @@ export default function Hero() {
 
         {/* Supporting Subheading */}
         <p className="font-body text-base sm:text-lg md:text-xl text-[#cbc4d2] max-w-2xl mx-auto leading-relaxed">
-          Elite MVP Creation, Web Development, and ML Workflows engineered for visionary founders and high-growth enterprises.
+          Elite MVP Creation, Web Development, App Development, Game Development, and ML Workflows engineered for visionary founders and high-growth enterprises.
         </p>
 
         {/* Interactive Action Buttons */}

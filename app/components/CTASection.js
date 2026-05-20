@@ -233,7 +233,7 @@ export default function CTASection() {
     <section
       id="cta"
       ref={sectionRef}
-      className="zoom-section py-16 md:py-20 px-4 md:px-6 relative z-10 overflow-hidden"
+      className="zoom-section py-20 md:py-28 lg:py-32 px-6 md:px-10 lg:px-16 relative z-10 overflow-hidden"
     >
       <div
         ref={cardRef}

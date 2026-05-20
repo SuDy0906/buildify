@@ -17,6 +17,18 @@ export const VALUE_PROPS = [
     chipLabel: "ML workflow",
     copy: "We'll scope your ML workflow—from data pipelines and training to production inference and monitoring.",
   },
+  {
+    id: "app",
+    line: "Native apps that feel premium",
+    chipLabel: "App dev",
+    copy: "We'll scope your mobile app—platform strategy, UX flows, and a release plan from prototype to store launch.",
+  },
+  {
+    id: "game",
+    line: "Games built to engage and scale",
+    chipLabel: "Game dev",
+    copy: "We'll scope your game—mechanics, platforms, multiplayer, and live ops so your title ships and grows.",
+  },
 ];
 
 export const CTA_DEFAULT_COPY =

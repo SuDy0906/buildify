@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import CTASection from "./components/CTASection";
+import TeamProfileCard from "./components/TeamProfileCard";
+import { TEAM_MEMBERS } from "./lib/team";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 
@@ -193,7 +195,7 @@ export default function Home() {
               </h2>
               <div className="w-24 h-1 bg-primary rounded-full"></div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {/* MVP Creation Card */}
               <div className="glass-card p-6 md:p-10 rounded-xl flex flex-col gap-4 md:gap-6">
                 <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
@@ -319,6 +321,90 @@ export default function Home() {
                   <span className="material-symbols-outlined text-secondary cursor-pointer hover:translate-x-2 transition-transform">arrow_forward</span>
                 </div>
               </div>
+
+              {/* App Development Card */}
+              <div className="glass-card p-6 md:p-10 rounded-xl flex flex-col gap-4 md:gap-6">
+                <div className="w-14 h-14 rounded-lg bg-primary-container/10 flex items-center justify-center border border-primary-container/20 text-on-primary-container">
+                  <span className="material-symbols-outlined text-4xl">smartphone</span>
+                </div>
+                <h3
+                  style={{
+                    fontFamily: '"Space Grotesk", sans-serif',
+                    fontSize: "clamp(22px, 2.5vw, 32px)",
+                    lineHeight: 1.3,
+                    fontWeight: 600,
+                  }}
+                >
+                  App Development
+                </h3>
+                <p
+                  style={{
+                    fontFamily: '"Geist", sans-serif',
+                    fontSize: "16px",
+                    lineHeight: 1.6,
+                    fontWeight: 400,
+                  }}
+                  className="text-[#cbc4d2] leading-relaxed"
+                >
+                  iOS and Android experiences with polished UX, offline-ready flows, and store-ready releases built for retention.
+                </p>
+                <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+                  <span
+                    style={{
+                      fontFamily: '"Geist", sans-serif',
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      letterSpacing: "-0.01em",
+                    }}
+                    className="text-on-primary-container"
+                  >
+                    PHASE 04
+                  </span>
+                  <span className="material-symbols-outlined text-on-primary-container cursor-pointer hover:translate-x-2 transition-transform">arrow_forward</span>
+                </div>
+              </div>
+
+              {/* Game Development Card */}
+              <div className="glass-card p-6 md:p-10 rounded-xl flex flex-col gap-4 md:gap-6">
+                <div className="w-14 h-14 rounded-lg bg-tertiary-container/10 flex items-center justify-center border border-tertiary-container/20 text-tertiary-container">
+                  <span className="material-symbols-outlined text-4xl">sports_esports</span>
+                </div>
+                <h3
+                  style={{
+                    fontFamily: '"Space Grotesk", sans-serif',
+                    fontSize: "clamp(22px, 2.5vw, 32px)",
+                    lineHeight: 1.3,
+                    fontWeight: 600,
+                  }}
+                >
+                  Game Development
+                </h3>
+                <p
+                  style={{
+                    fontFamily: '"Geist", sans-serif',
+                    fontSize: "16px",
+                    lineHeight: 1.6,
+                    fontWeight: 400,
+                  }}
+                  className="text-[#cbc4d2] leading-relaxed"
+                >
+                  Playable prototypes through full builds—gameplay systems, multiplayer, and live ops tuned for engagement and scale.
+                </p>
+                <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+                  <span
+                    style={{
+                      fontFamily: '"Geist", sans-serif',
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      letterSpacing: "-0.01em",
+                    }}
+                    className="text-tertiary-container"
+                  >
+                    PHASE 05
+                  </span>
+                  <span className="material-symbols-outlined text-tertiary-container cursor-pointer hover:translate-x-2 transition-transform">arrow_forward</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -350,98 +436,21 @@ export default function Home() {
                 Our elite team blends architectural precision with breakthrough innovation.
               </p>
             </div>
-            <div className="flex flex-col gap-8 md:gap-12 max-w-5xl mx-auto">
-              {/* Profile 1 - Left Staggered */}
-              <div className="slide-left team-profile-card glass-card flex flex-col md:flex-row gap-6 md:gap-8 p-6 md:p-10 rounded-2xl w-full md:w-[85%] self-start border-l-4 border-l-primary/30">
-                <div className="w-32 h-32 md:w-56 md:h-56 rounded-2xl overflow-hidden shrink-0 border border-white/10 grayscale hover:grayscale-0 transition-all duration-1000">
-                  <img
-                    alt="Lead Architect"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoPg8ywfdMQ7HZDKYlRLGo2XMViXWWpW0dfFn_fJOUWwpsSRdpA3qE96zaFNMDxwnAtP6z1IupjbgNfaPzJGHZI4dPIRqRSRbSeWNqM-AvLH74var4VeEUxV_5eqcrwb5_waa32fu4zUr_avg4tgtv9rSlnJZ7axUhKwjhS-N4PGpIMJVkLpLpGXWKePoRf7S7dNWVE_GOCoqWjYjSNIS_MhBKiEq1JaXLzOOjpLXR2V_HUBptaBbSpUuh6mTLBWIjVxlZAx0Vuzk"
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <h4
-                    style={{
-                      fontFamily: '"Space Grotesk", sans-serif',
-                      fontSize: "clamp(24px, 3vw, 40px)",
-                      lineHeight: 1.2,
-                      fontWeight: 600,
-                    }}
-                    className="mb-2"
-                  >
-                    Marcus Thorne
-                  </h4>
-                  <p
-                    style={{
-                      fontFamily: '"Geist", sans-serif',
-                      fontSize: "12px",
-                      fontWeight: 700,
-                      letterSpacing: "0.3em",
-                    }}
-                    className="text-primary mb-6 uppercase"
-                  >
-                    Lead Architect
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: '"Geist", sans-serif',
-                      fontSize: "18px",
-                      lineHeight: 1.6,
-                      fontWeight: 400,
-                    }}
-                    className="text-[#cbc4d2] leading-relaxed"
-                  >
-                    Spearheading system design and global technical strategy for elite digital deployments, ensuring absolute scalability and architectural integrity.
-                  </p>
-                </div>
-              </div>
-
-              {/* Profile 2 - Right Staggered */}
-              <div className="slide-right team-profile-card glass-card flex flex-col md:flex-row gap-6 md:gap-8 p-6 md:p-10 rounded-2xl w-full md:w-[85%] self-end border-r-4 border-r-secondary/30">
-                <div className="w-32 h-32 md:w-56 md:h-56 rounded-2xl overflow-hidden shrink-0 border border-white/10 grayscale hover:grayscale-0 transition-all duration-1000 md:order-2">
-                  <img
-                    alt="ML Specialist"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_HXFd9vrnLDl7R4LcpcIqXKdwvVECQfkByodTZ1WyHMSBdtlFZiV40tK5XFaPYQ98HWIZUhTK71aMY85TPlxxq7MLlLGxKAtVIQt8OQaHFmnXf53yhJm5kmcTHkznCj3O4TpWD-38YerdhG9TbByM3ApVt4qF5y6fXU_FujGWLF3CX4C3w002739rw01WHsk30By3VNtzi-uWA-pkTSrXFEKd_L0Z4y-BxWVLl7eSgONosLQoga5bdzRpWZweDtWh873f3HzXWdM"
-                  />
-                </div>
-                <div className="flex flex-col justify-center md:text-right md:order-1">
-                  <h4
-                    style={{
-                      fontFamily: '"Space Grotesk", sans-serif',
-                      fontSize: "clamp(24px, 3vw, 40px)",
-                      lineHeight: 1.2,
-                      fontWeight: 600,
-                    }}
-                    className="mb-2"
-                  >
-                    Elena Vance
-                  </h4>
-                  <p
-                    style={{
-                      fontFamily: '"Geist", sans-serif',
-                      fontSize: "12px",
-                      fontWeight: 700,
-                      letterSpacing: "0.3em",
-                    }}
-                    className="text-secondary mb-6 uppercase"
-                  >
-                    ML Specialist
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: '"Geist", sans-serif',
-                      fontSize: "18px",
-                      lineHeight: 1.6,
-                      fontWeight: 400,
-                    }}
-                    className="text-[#cbc4d2] leading-relaxed"
-                  >
-                    Pioneering algorithmic efficiency and neural network integration for enterprise solutions, building the intelligence that powers next-gen products.
-                  </p>
-                </div>
-              </div>
+            <div className="flex flex-col gap-10 md:gap-14 max-w-5xl mx-auto">
+              {TEAM_MEMBERS.map((member) => (
+                <TeamProfileCard
+                  key={member.id}
+                  id={member.id}
+                  name={member.name}
+                  designation={member.designation}
+                  bio={member.bio}
+                  image={member.image}
+                  imageAlt={member.designation}
+                  accent={member.accent}
+                  align={member.align}
+                  slideClass={member.align === "right" ? "slide-right" : "slide-left"}
+                />
+              ))}
             </div>
           </div>
         </section>

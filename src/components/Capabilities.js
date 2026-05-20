@@ -90,6 +90,24 @@ export default function Capabilities() {
       bgClass: "bg-[#cdc0e9]/10",
       borderClass: "border-[#cdc0e9]/20",
     },
+    {
+      phase: "PHASE 04",
+      title: "App Development",
+      desc: "iOS and Android experiences with polished UX, offline-ready flows, and store-ready releases built for retention.",
+      icon: "smartphone",
+      colorClass: "text-[#e0d2ff]",
+      bgClass: "bg-[#6750a4]/10",
+      borderClass: "border-[#6750a4]/20",
+    },
+    {
+      phase: "PHASE 05",
+      title: "Game Development",
+      desc: "Playable prototypes through full builds—gameplay systems, multiplayer, and live ops tuned for engagement and scale.",
+      icon: "sports_esports",
+      colorClass: "text-[#c9a74d]",
+      bgClass: "bg-[#c9a74d]/10",
+      borderClass: "border-[#c9a74d]/20",
+    },
   ];
 
   return (
@@ -108,7 +126,7 @@ export default function Capabilities() {
         </div>
 
         {/* 3-Column Capability Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {capabilitiesList.map((item, idx) => (
             <div
               key={idx}
