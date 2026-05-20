@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Buildify Tech Services
+
+Marketing site for Buildify — Next.js 16, static export, deployed on Cloudflare Pages.
+
+Repo: https://github.com/SuDy0906/buildify
 
 ## Getting Started
 
