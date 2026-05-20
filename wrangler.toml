@@ -1,0 +1,4 @@
+# Static Cloudflare Pages — do NOT use opennextjs-cloudflare for this project.
+name = "buildify-website"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "./out"
