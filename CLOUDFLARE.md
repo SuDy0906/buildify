@@ -19,11 +19,25 @@ That is **wrong** for this repo. The dashboard is using a **Next.js Worker / Ope
 |--------|----------------|----------------|
 | **Build command** | `npm run build` | `npx opennextjs-cloudflare build` |
 | **Build output directory** | `out` | `.vercel/output/static`, `.next` |
-| **Deploy command** | *(empty / not set)* | `npx wrangler deploy`, any wrangler command |
+| **Deploy command** | `npm run deploy:cloudflare` | `npx opennextjs-cloudflare build`, bare `npx wrangler deploy` (Worker) |
 | **Framework preset** | **None** or **Static** | Next.js (Workers), OpenNext |
 
 3. **Environment variables:** `NODE_VERSION` = `20`
 4. **Save** → **Deployments** → **Retry deployment**
+
+### If **Deploy command** is required (your screen)
+
+Use these three fields together:
+
+| Field | Value |
+|--------|--------|
+| **Build command** | `npm run build` |
+| **Build output directory** | `out` *(if shown)* |
+| **Deploy command** | `npm run deploy:cloudflare` |
+
+That runs `wrangler pages deploy out` — static only, no OpenNext.
+
+**Project name:** Cloudflare project must be named `buildify-website` (matches `wrangler.toml`), or change the name in `package.json` → `deploy:cloudflare` script to match your project.
 
 If there is no way to clear **Deploy command** or **Build command**, **delete this project** and create a new one:
 
